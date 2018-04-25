@@ -1,0 +1,28 @@
+{
+    "rules": {
+        "no-console": 0,
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "quotes": ["error", "single"],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "never"]
+    },
+    "env": {
+        "es6": true,
+        "node": false,
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": false,
+            "modules": true
+        },
+        "sourceType": "module"
+    },
+    "extends": "eslint:recommended"
+}

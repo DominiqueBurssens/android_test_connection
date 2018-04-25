@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LocalhostApp</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="connect">Connect</string>
+    <string name="response">Response</string>
+
+    <string name="default_host">10.0.2.2</string>
+    <string name="default_port">3000</string>
+</resources>
