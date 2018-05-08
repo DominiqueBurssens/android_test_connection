@@ -9,3 +9,8 @@ app.get('/', (request, response) => {
 app.listen(port, 'localhost', e =>
     console.log(`Listening on localhost:${port}`)
 )
+
+var sslOptions = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+  };
