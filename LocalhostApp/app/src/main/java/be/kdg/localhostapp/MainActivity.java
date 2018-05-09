@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView reponseView;
     private EditText hostEdit;
     private EditText portEdit;
+    private CheckBox httpsCheckBox;
     private Button connectButton;
     private ProgressBar progressBar;
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         this.reponseView = findViewById(R.id.response);
         this.hostEdit = findViewById(R.id.edit_host);
         this.portEdit = findViewById(R.id.edit_port);
+        this.httpsCheckBox = findViewById(R.id.https);
         this.connectButton = findViewById(R.id.connect);
         this.progressBar = findViewById(R.id.progressBar);
 
@@ -53,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
             RestClient client = new RestClient(
                     this,
                     hostEdit.getText().toString(),
-                    Integer.parseInt(portEdit.getText().toString()));
+                    Integer.parseInt(portEdit.getText().toString()),
+                    httpsCheckBox.isChecked());
             observer.onNext(client.getServerResponse());
         });
 

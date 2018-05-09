@@ -4,6 +4,7 @@
     <string name="port">Port</string>
     <string name="connect">Connect</string>
     <string name="response">Response</string>
+    <string name="https">HTTPS</string>
 
     <string name="default_host">10.0.2.2</string>
     <string name="default_port">3000</string>

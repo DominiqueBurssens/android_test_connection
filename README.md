@@ -33,3 +33,16 @@ hieronder. Dus *"Connectie naar server werkt!"* of *"GEEN"*.
 
 ![/images/werkt_niet.png](/images/werkt_niet.png)
 
+## Info
+
+The SSL certificate was created using the following command:
+```
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 999
+```
+Password is 'test'.
+
+## Common error messages
+
+# javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
+
+[https://developer.android.com/training/articles/security-ssl](https://developer.android.com/training/articles/security-ssl)
