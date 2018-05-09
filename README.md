@@ -14,9 +14,10 @@ De server opstarten kan je doen als volgt. We doen dit vanop de **command line**
 2. `npm install`
 3. `npm run start`
 
-By default is de poort 3000. Je kan deze aanpassen in `src/index.js`.
+By default is de poort **3000** voor HTTP en **4000** voor HTTPS. Je kan deze aanpassen in `src/index.js`.
 
-**Test de werking uit met een browser door te surfen naar [http://localhost:3000](http://localhost:3000)**.
+**Test de werking uit met een browser door te surfen naar [http://localhost:3000](http://localhost:3000) en [https://localhost:4000](https://localhost:4000)**. In het geval van HTTPS zal je browser je vragen 
+of je wel wil voortgaan omdat het certificaat niet van een officiële instantie komt. Akkoord gaan en verderzetten is de boodschap.
 
 ## Android app
 
@@ -33,16 +34,19 @@ hieronder. Dus *"Connectie naar server werkt!"* of *"GEEN"*.
 
 ![/images/werkt_niet.png](/images/werkt_niet.png)
 
+Als je een HTTPS connectie wil testen maak je gebruik van **port 4000** en zet je **HTTPS** aan.
+
+![/images/werkt_https.png](/images/werkt_https.png)
+
 ## Info
 
-The SSL certificate was created using the following command:
+Het SSL certificaat werd aangemaakt met volgend commando:
 ```
-openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 999
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 9999
 ```
-Password is 'test'.
+Het wachtwoord (eigenlijk *passphrase*) is 'test'.
 
-## Common error messages
+# SSL certificaat
 
-# javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.
-
+Een echt SSL certificaat hoef je niet te ondersteunen. Voor meer info kan je o.a. hier terecht:  
 [https://developer.android.com/training/articles/security-ssl](https://developer.android.com/training/articles/security-ssl)
